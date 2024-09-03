@@ -136,7 +136,7 @@ jobs:
       - name: Create ota page
         run: (cd ci && yarn && node ./generate-ota.mjs)
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: ipa-${{ env.CURRENT_BRANCH_SLASH_LESS }}
           path: page/ota/${{ github.ref_name }}
